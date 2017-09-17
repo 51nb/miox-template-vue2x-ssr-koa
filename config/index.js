@@ -1,0 +1,27 @@
+const Koa = require('koa');
+const path = require('path');
+const PKG = require('../package.json');
+const ServerSideRenderer = require('miox-koa-vue2x-server-render');
+const clientDevConfig = require('./webpack.client.dev.config');
+const clientProConfig = require('./webpack.client.pro.config');
+const serverDevConfig = require('./webpack.server.dev.config');
+const serverProConfig = require('./webpack.server.pro.config');
+
+const app = new Koa();
+const renderer = new ServerSideRenderer(app);
+renderer.connect(
+    renderer.isProd ? clientProConfig : clientDevConfig,
+    renderer.isProd ? serverProConfig : serverDevConfig,
+    {
+        hot: true,
+        html: path.resolve(__dirname, '..', 'src', 'index.html')
+    }
+);
+
+app.listen(PKG.service.port, PKG.service.ip, () => {
+    console.log(`\n\tRun Server At ${PKG.service.ip}:${PKG.service.port}`);
+    if (!renderer.isProd) {
+        console.log(`\tWaiting for Webpack compiling...`);
+    }
+    console.log(`\n`);
+});
