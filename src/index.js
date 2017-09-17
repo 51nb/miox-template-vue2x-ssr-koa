@@ -1,7 +1,6 @@
 /**
  * Miox install file
  */
-import './a.css';
 import 'miox-css';
 import Miox from 'miox';
 import Engine from 'miox-vue2x';
