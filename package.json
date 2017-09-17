@@ -10,6 +10,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=dev node ./config/index.js",
+    "view": "NODE_ENV=production node ./config/index.js",
     "build": "npm run client:build && npm run server:build",
     "client:build": "NODE_ENV=production webpack --config config/webpack.client.pro.config.js --progress --hide-modules",
     "server:build": "NODE_ENV=production webpack --config config/webpack.server.pro.config.js --progress --hide-modules"

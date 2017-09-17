@@ -28,7 +28,7 @@ module.exports = webpackConfig(config => {
             // do not externalize dependencies that need to be processed by webpack.
             // you can add more file types here e.g. raw *.vue files
             // you should also whitelist deps that modifies `global` (e.g. polyfills)
-            whitelist: []
+            whitelist: [/miox\-?/]
         }),
 
         performance: {
