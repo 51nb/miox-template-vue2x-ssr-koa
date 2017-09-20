@@ -37,7 +37,7 @@ module.exports = webpackConfig(config => {
             }),
             config.vueClient(),
             config.jsCompress(),
-            config.resource('common.[hash:10].css')
+            config.resource('[name].[hash:10].css')
         ]
     });
 });
