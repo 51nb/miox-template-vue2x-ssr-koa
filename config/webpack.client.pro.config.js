@@ -5,7 +5,7 @@ module.exports = webpackConfig(config => {
         env: 'client',
         'source-compile': {
             dirs: [/^src/i],
-            modules: [/^miox-?/]
+            modules: [/miox-?/]
         }
     });
 
