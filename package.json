@@ -16,13 +16,12 @@
     "server:build": "NODE_ENV=production webpack --config config/webpack.server.pro.config.js --progress --hide-modules"
   },
   "dependencies": {
-    "miox": "^5.1.0",
-    "miox-compose": "^5.1.0",
-    "miox-convert": "^5.0.39",
-    "miox-css": "^5.1.0",
-    "miox-router": "^5.1.0",
-    "miox-vue2x": "^5.1.0",
-    "miox-vue2x-classify": "^5.1.0"
+    "miox": "^5.1.1",
+    "miox-compose": "^5.1.1",
+    "miox-css": "^5.1.1",
+    "miox-router": "^5.1.1",
+    "miox-vue2x": "^5.1.1",
+    "miox-vue2x-classify": "^5.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
@@ -38,8 +37,8 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "koa": "^2.3.0",
-    "miox-koa-vue2x-server-render": "^5.1.0",
-    "miox-vue2x-webpack-config": "^5.1.0",
+    "miox-koa-vue2x-server-render": "^5.1.1",
+    "miox-vue2x-webpack-config": "^5.1.1",
     "webpack": "^3.6.0"
   }
 }
